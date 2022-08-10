@@ -1,27 +1,28 @@
 """""""""""""""""""""""""""""""""""""""""""""""""
-" Custom Settings
+" Custom Settings - Global
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 imap jj <Esc>
+nnoremap <C-f> :Autoformat<CR>
 
 " Don't exit visual mode when changing tab depth
-:vnoremap < <gv
-:vnoremap > >gv
+vnoremap < <gv
+vnoremap > >gv
 
 " Split behaviour
-:set splitright
-:set splitbelow
-:nnoremap <C-J> <C-W><C-J>
-:nnoremap <C-K> <C-W><C-K>
-:nnoremap <C-L> <C-W><C-L>
-:nnoremap <C-H> <C-W><C-H>
+set splitright
+set splitbelow
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Gets rid of annoying bell spam
-:set visualbell
-:set noerrorbells
+set visualbell
+set noerrorbells
 
 " Line numbers
-:set nu
+set nu
 
 " Keep cursor centered
 set scrolloff=5
@@ -57,7 +58,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-expand-region'
 Plug 'christoomey/vim-tmux-navigator'
 
-" Tools
+" Autocomplete/LSP Tools
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -68,13 +69,18 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'pappasam/jedi-language-server'
 
+" Other Tools
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+
+" NERDTree
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+Plug 'vim-autoformat/vim-autoformat'
 
 " Ruby
 Plug 'vim-ruby/vim-ruby'
