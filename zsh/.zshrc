@@ -74,6 +74,9 @@ plugins=(git zsh-autosuggestions sudo dirhistory)
 
 source $ZSH/oh-my-zsh.sh
 
+# fzf
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -100,6 +103,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Launch straight to tmux
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec tmux
+# fi
+
 # Colours
 export COLORTERM=truecolor
 
@@ -121,7 +129,7 @@ alias cdvpi="cd ~/vpi/repos/vpi"
 alias dropboxarchive="sh ~/scripts/archive-dropbox.sh"
 alias vimrc="vim ~/.config/nvim/init.vim"
 alias zshrc="vim ~/.zshrc"
-alias tmuxrc="vim ~/.tmux.conf"
+alias tmuxrc="vim ~/.tmux.conf.local"
 
 alias vpiup="sh ~/scripts/launch-full-vpi.sh"
 alias vpidebugrails="sh ~/scripts/debug-vpi-rails.sh"
@@ -134,7 +142,6 @@ alias vpirandombullshitgo="sh ~/scripts/vpi-doctor.sh"
 alias vpicreatewarehouse="sh ~/scripts/create-nth-warehouse.sh"
 
 alias sql="sh ~/scripts/run-sql.sh"
-
 alias sshexperimental="sh ~/scripts/ssh-experimental.sh"
 alias sshstableapp="sh ~/scripts/ssh-stable-app.sh"
 alias sshstabledb="sh ~/scripts/ssh-stable-db.sh"

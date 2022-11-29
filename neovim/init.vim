@@ -1,10 +1,20 @@
 """""""""""""""""""""""""""""""""""""""""""""""""
-" Custom Settings - Global
+" Custom Bindnigs - Global
 """""""""""""""""""""""""""""""""""""""""""""""""
-" Key mappings
 imap jj <Esc>
-nnoremap <C-f> :Autoformat<CR>
 
+nnoremap <C-_> gcc
+vnoremap <C-_> gc
+
+nnoremap <C-N> :Files<CR>
+nnoremap <C-P> :NERDTree<CR>
+nnoremap <C-p> :NERDTreeFind<CR>
+
+nnoremap <C-F> :Ag<CR>
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Custom Setting - Global
+"""""""""""""""""""""""""""""""""""""""""""""""""
 " Don't exit visual mode when changing tab depth
 vnoremap < <gv
 vnoremap > >gv
@@ -27,7 +37,14 @@ set nu
 " Keep cursor centered
 set scrolloff=5
 
-""""""""""""""""""""""""""""""""""""""""""""""""""
+" Don't save swap files
+set noswapfile
+
+" Open folders with Ranger
+let g:NERDTreeHijackNetrw = 0
+let g:ranger_replace_netrw = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin List
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins will be downloaded under the specified directory.
@@ -57,6 +74,10 @@ Plug 'godlygeek/tabular'
 Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-expand-region'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-autoformat/vim-autoformat'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'dbeniamine/cheat.sh-vim'
 
 " Autocomplete/LSP Tools
 Plug 'neovim/nvim-lspconfig'
@@ -72,7 +93,7 @@ Plug 'pappasam/jedi-language-server'
 " Other Tools
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-
+Plug 'tpope/vim-fugitive'
 
 " NERDTree
 Plug 'preservim/nerdtree'
@@ -80,14 +101,11 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-Plug 'vim-autoformat/vim-autoformat'
-
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 
 " Disabled
-" Plug 'tpope/vim-fugitive'
 " Plug 'airblade/vim-gitgutter'
 
 " List ends here. Plugins become visible to Vim after this call.
@@ -150,11 +168,8 @@ lua <<EOF
     },
 
     mapping = cmp.mapping.preset.insert({
-      -- ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-      -- ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      -- ['<C-Space>'] = cmp.mapping.complete(),
-      -- ['<C-e>'] = cmp.mapping.abort(),
-      -- ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
     }),
 
     sources = cmp.config.sources({
