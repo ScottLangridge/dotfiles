@@ -104,9 +104,9 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Launch straight to tmux
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#   exec tmux
-# fi
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
 
 # Colours
 export COLORTERM=truecolor
