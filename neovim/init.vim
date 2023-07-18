@@ -11,7 +11,7 @@ nnoremap <C-P> :NERDTree<CR>
 nnoremap <C-p> :NERDTreeFind<CR>
 
 nnoremap <C-F> :Ag<CR>
-"
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Custom Setting - Global
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -88,7 +88,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
-Plug 'pappasam/jedi-language-server'
+Plug 'davidhalter/jedi-vim'
 
 " Other Tools
 Plug 'junegunn/fzf'
@@ -209,9 +209,7 @@ lua <<EOF
 
   -- Setup lspconfig.
   local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-  require('lspconfig')['pyright'].setup {
-    capabilities = capabilities
-  }
+  require'lspconfig'.jedi_language_server.setup{}
   require('lspconfig')['solargraph'].setup {
     capabilities = capabilities
   }

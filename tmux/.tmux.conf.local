@@ -44,6 +44,9 @@ tmux_conf_new_session_prompt=false
 
 # -- display -------------------------------------------------------------------
 
+set -g base-index 0           # start windows numbering at 0
+setw -g pane-base-index 0     # make pane numbering consistent with windows
+
 # RGB 24-bit colour support (tmux >= 2.2), possible values are:
 #  - true
 #  - false
