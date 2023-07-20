@@ -408,7 +408,7 @@ tmux_conf_uninstall_plugins_on_reload=true
 # visit https://github.com/tmux-plugins for available plugins
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'christoomey/vim-tmux-navigator'
-set -g @plugin 'ofirgall/tmux-window-name'
+# set -g @plugin 'ofirgall/tmux-window-name'
 #set -g @plugin 'jimeh/tmux-themepack'
 #set -g @plugin 'tmux-plugins/tmux-copycat'
 #set -g @plugin 'tmux-plugins/tmux-cpu'
