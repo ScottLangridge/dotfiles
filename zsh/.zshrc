@@ -122,6 +122,7 @@ export PATH="$PATH:/home/scott/.asdf/installs/python/3.9.0/bin/"
 alias vim="nvim"
 alias src="source ~/.zshrc"
 alias gsu="git submodule update"
+alias mr="sh ~/scripts/multirepo.sh"
 
 alias cdwindoc="cd /mnt/c/Users/Scott/Documents"
 alias cdaoc="cd /mnt/c/Users/Scott/Documents/Personal/AdventOfCode"
@@ -142,7 +143,8 @@ alias vpiclearcache="sh ~/scripts/clear-vpi-cache.sh"
 alias vpinukedb="sh ~/scripts/reset-vpi-db.sh"
 alias vpirandombullshitgo="sh ~/scripts/vpi-doctor.sh"
 alias vpicreatewarehouse="sh ~/scripts/create-nth-warehouse.sh"
-alias mr="sh ~/scripts/multirepo.sh"
+
+alias siebuild="cmake -Bbuild . && (cd build && make VERBOSE=1)"
 
 alias sql="sh ~/scripts/run-sql.sh"
 alias sshexperimental="sh ~/scripts/ssh-experimental.sh"
