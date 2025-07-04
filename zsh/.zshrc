@@ -119,7 +119,7 @@ export PATH="$PATH:/home/scott/.asdf/installs/python/3.9.0/bin/"
 # export AWS_SECRET_ACCESS_KEY=""
 # export RESTIC_REPOSITORY=""
 # export RESTIC_PASSWORD=""
-source ~/.dotfiles/.restic_secrets
+source ~/.dotfiles/zsh/.restic_secrets
 
 # ASDF
 . $HOME/.asdf/asdf.sh
